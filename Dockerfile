@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY package.json package-lock.json /usr/src/app/
 
 # 安装项目依赖,package.json 和 lock文件没有变化时，会使用缓存文件，加快打包速度
-RUN npm install --registry=https://registry.npmmirror.com
+RUN npm install
 
 # 复制项目文件到工作目录
 COPY . /usr/src/app/
