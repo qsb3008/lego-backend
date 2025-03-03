@@ -22,4 +22,4 @@ RUN npm run tsc
 EXPOSE 7001
 
 # 启动应用
-CMD npx egg-scripts start --title=lego-backend
+CMD ["npx", "egg-scripts", "start", "--title=lego-backend"]
