@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>授权成功</title>
+</head>
+<body>
+
+<h1>授权成功</h1>
+<h2>两秒后关闭</h2>
+
+<img src="{{ url }}" alt="">
+<script>
+  // 监听窗口加载事件
+  window.onload = function() {
+  // 添加定时器，2秒后关闭窗口
+  setTimeout(function() {
+    const data = {
+      type: 'oauth-token',
+      token: '{{ token }}',
+    }
+    window.opener.postMessage(data, 'http://127.0.0.1:5173');
+    window.close();
+  }, 2000);
+  };
+
+</script>
+</body>
+</html>

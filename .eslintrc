@@ -1,0 +1,18 @@
+{
+  "extends": "eslint-config-egg/typescript",
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/semi": ["off", "always"],
+    "@typescript-eslint/no-unused-vars": 1,
+    "array-bracket-spacing": "off",
+    "space-before-function-paren": [
+      "error",
+      { "anonymous": "always", "named": "never", "asyncArrow": "always" }
+    ],
+    "comma-dangle": 0,
+    "arrow-parens": ["error", "always"]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
