@@ -36,10 +36,10 @@ jobs:
           password: '${{ secrets.ACR_PASSWORD }}'
       # 使用正确的github tag 对应ACR tag 进行 docker build
       - name: Build image for ACR docker
-        run: docker build --tag "docker build --tag "crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:${{github.ref_name}}" .
+        run: docker build --tag "crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:${{github.ref_name}}" .
       # 使用标记的 tag 进行 push
       - name: Push Image to ACR
-        run: docker push docker build --tag "crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:${{github.ref_name}}
+        run: docker push crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:${{github.ref_name}}
       # 查找 docker-compose-online 文件 并且完成版本替换
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
