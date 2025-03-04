@@ -20,7 +20,7 @@ services:
     env_file:
       - .env
   lego-backend:
-    image: crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:0.0.2
+    image: crpi-t5b5m6otvdac8bj3.cn-shenzhen.personal.cr.aliyuncs.com/qsb3008/lego:{{tag}}
     container_name: lego-backend
     ports:
       - 7002:7001
